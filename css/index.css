@@ -1,0 +1,107 @@
+/* GLOBAL */
+
+body,
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+/* HTML */
+
+
+/* header  */
+
+
+/* style position cua header nam tren carousel  */
+
+header {
+    position: absolute;
+    /* look at the letters  */
+    top: 20px;
+    z-index: 100;
+    left: 50%;
+    /* canh cho chinh the do  */
+    transform: translate(-50%);
+    /* chua du do navbar cua bootstrap san co padding  */
+}
+
+header .navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#movieMenu .navbar-nav {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+
+/* tao after cho the li  */
+
+#movieMenu .navbar-nav .nav-item::after {
+    content: ' ';
+    width: 0;
+    height: 3px;
+    /* linear radian color  */
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    display: block;
+}
+
+#movieMenu .navbar-nav .nav-item:hover::after {
+    width: 100%;
+    transition: all .5s;
+}
+
+
+/* dinh nghia cho a HOME dac biet la .active*/
+
+#movieMenu .navbar-nav .nav-item.active::after {
+    width: 100% !important;
+}
+
+#movieMenu .navbar-nav .nav-item .nav-link {
+    padding: 10px 15px;
+}
+
+
+/* carousel-cation  va the cha trung gian carousel inner de do uu tien cao hon*/
+
+#movieCarousel .carousel-inner .carousel-caption {
+    text-align: left;
+    /* co san position cua bootstrap */
+    top: 50%;
+    left: 50%;
+    /* chua du phai them translate */
+    /* keo nguoc lai ca hai huong doc ngang */
+    /* position --> cho the cha, con tranform --> cho the con ; */
+    transform: translate(-50%, -50%);
+}
+
+
+/* custom the indicator  */
+
+#movieCarousel .carousel-indicators {
+    justify-content: flex-start;
+    left: 50%;
+    transform: translateX(-50%);
+    /* chua du phai them container cho the indicator */
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 15px;
+}
+
+
+/* doi hinh dau gach thanh hnh tron  */
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    /* binh thuong opacity la 1 */
+    opacity: 1;
+}
+
+.carousel-indicators li.active {
+    background-color: white;
+}
